@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 62px;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* header */
+.header__inner {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 66px;
+  background-color: #2196F3;
+}
+
+.all, .favourite {
+  color: #fff;
+  padding: 23px;
+}
+
+.all.active,
+.favourite.active {
+  background-color: #1E88E5;
+}
+
+/* Page */
+.page__inner {
+  padding: 62px 53px;
+}
+
+.page__list {
+  display: grid;
+  gap: 31px;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+@media(max-width: 768px) {
+  .page__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media(max-width: 575px) {
+  .page__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 414px) {
+  .page__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.page__img {
+  width: 100%;
+  height: 224px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.page__img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2)
+}
+
+.cat-card {
+  position: relative;
+}
+
+.heart-button {
+  position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    z-index: 100;
+    opacity: 0;
+}
+
+
+.cat-card:hover .heart-button {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.heart-button:hover svg path {
+  fill: #F24E1E;
+}
+ 
+.btn-more {
+  background-color: transparent;
+  border: none;
+}
+
+.btn-more:hover {
+  border-bottom: 1px solid #F24E1E;
+}
