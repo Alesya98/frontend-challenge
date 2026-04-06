@@ -11,7 +11,7 @@ function App() {
       <header className="header">
         <div className="container header__inner">
           <nav className="page__link">
-            <NavLink className="all active" to="/">
+            <NavLink className={({isActive})=> isActive ? 'all active' : 'all'} to="/">
               Все котики
             </NavLink>
             <NavLink className="favourite" to="/favourite">
@@ -23,7 +23,7 @@ function App() {
       <main>
         <div className="container page__inner">
           <Routes>
-            <Route index path="/frontend-challenge" element={<Cats />} />
+            <Route index path="/" element={<Cats />} />
             <Route path="/favourite" element={<FavouriteCats />} />
           </Routes>
         </div>

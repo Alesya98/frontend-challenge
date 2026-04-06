@@ -10,7 +10,7 @@ import { BrowserRouter, HashRouter } from 'react-router-dom';
 createRoot(document.getElementById('root')).render(
 <Provider store={store}>
     {/* <StrictMode> */}
-    <HashRouter>
+    <HashRouter >
     <App />
     </HashRouter>
   {/* </StrictMode>, */}
