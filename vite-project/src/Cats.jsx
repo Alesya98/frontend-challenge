@@ -9,7 +9,7 @@ export const Cats = () => {
     
   useEffect(() => {
     dispatch(getRandomCat());
-  }, []);
+  }, [dispatch]);
 
   const handleClick = (item) => {
     dispatch(addToFavourites(item));

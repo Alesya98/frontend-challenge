@@ -23,7 +23,7 @@ function App() {
       <main>
         <div className="container page__inner">
           <Routes>
-            <Route index element={<Cats />} />
+            <Route index path="/" element={<Cats />} />
             <Route path="/favourite" element={<FavouriteCats />} />
           </Routes>
         </div>
