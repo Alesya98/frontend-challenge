@@ -11,7 +11,7 @@ function App() {
       <header className="header">
         <div className="container header__inner">
           <nav className="page__link">
-            <NavLink className="all" to="/">
+            <NavLink className="all active" to="/">
               Все котики
             </NavLink>
             <NavLink className="favourite" to="/favourite">
